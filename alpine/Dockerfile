@@ -1,6 +1,6 @@
 FROM scratch
 
-ADD rootfs.tar.gz
+ADD rootfs.tar.gz /
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN adduser -D memcache
