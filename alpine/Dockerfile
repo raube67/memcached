@@ -1,4 +1,4 @@
- \FROM scratch
+FROM scratch
 
 ADD rootfs.tar.gz /
 
