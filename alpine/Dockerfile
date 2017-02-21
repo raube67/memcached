@@ -1,4 +1,4 @@
-FROM scratch
+ \FROM scratch
 
 ADD rootfs.tar.gz /
 
@@ -9,8 +9,8 @@ ENV MEMCACHED_VERSION 1.4.33
 ENV MEMCACHED_SHA1 e343530c55946ccbdd78c488355b02eaf90b3b46
 
 RUN set -x \
-        && export http_proxy=http://surf.agis.proxy.allianz:8080
-	&& export https_proxy=http://surf.agis.proxy.allianz:8080
+        && export http_proxy=http://surf.agis.proxy.allianz:8080 \
+	&& export https_proxy=http://surf.agis.proxy.allianz:8080 \
     	&& apk add --no-cache --virtual .build-deps \
 		gcc \
 		libc-dev \
